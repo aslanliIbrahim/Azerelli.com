@@ -1,0 +1,55 @@
+header {
+  nav {
+    .logo-side {
+      height: 56px;
+      @include flexible(center, center, row);
+    }
+    .nav-right {
+      @include flexible($jus: space-between);
+      &__left {
+        @include flexible($items: center);
+        .main-ul{
+          display: flex;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          .main-li {
+            // transition: 0.25s all ease-in-out;
+            &:nth-child(2n+2){
+                a {
+                    &::after {
+                      content: "";
+                    }
+                  }
+            }
+           
+            .main-a {
+              @include for-A;
+              padding: 0px 20px;
+              position: relative;
+              transition: transform 0.2s;
+
+              &::after {
+                content: url("../img/home/arrow-down.svg");
+                margin-top: 1px;
+                width: 24px;
+                padding: 5px;
+                text-align: center;
+                position: inherit;
+              }
+            }
+            &:hover {
+              border-bottom: 2px solid $main-red;
+              a {
+                &::after {
+                  bottom: -3px;
+                }
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
