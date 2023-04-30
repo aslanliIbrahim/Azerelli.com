@@ -5,6 +5,11 @@ header nav .logo-side {
   align-items: center;
   flex-direction: row;
 }
+@media (max-width: 1200px) {
+  header nav .logo-side {
+    display: none;
+  }
+}
 header nav .nav-right {
   display: flex;
   justify-content: space-between;
@@ -45,6 +50,89 @@ header nav .nav-right__left .main-ul .main-li:hover {
 }
 header nav .nav-right__left .main-ul .main-li:hover a::after {
   bottom: -3px;
+}
+@media (max-width: 1200px) {
+  header nav .nav-right {
+    display: none;
+  }
+}
+@media (min-width: 1201px) {
+  header nav .mob-nav {
+    display: none;
+  }
+}
+
+main .main-one {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  min-height: 742px;
+  position: relative;
+}
+main .main-one .for-bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+main .main-one .for-bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .main-one__text-area {
+  color: #fff;
+}
+main .main-one__text-area .first-text {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  text-align: center;
+}
+main .main-one__text-area .second-text {
+  font-weight: 600;
+  text-align: center;
+}
+main .main-one .main-card {
+  position: relative;
+  transition: 2s ease-in-out;
+}
+main .main-one .main-card .text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: inherit;
+  z-index: 3;
+  color: black;
+}
+main .main-one .main-card .opn-cls-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+main .main-one .main-card:hover {
+  height: 350px;
+}
+main .main-one .main-card:hover img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .main-one::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  content: "";
+  height: 200px;
+  z-index: -2;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.62) 51%, #fff 82%, #fff 100%);
 }
 
 *,
