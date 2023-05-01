@@ -134,6 +134,45 @@ main .main-one::after {
   z-index: -2;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.62) 51%, #fff 82%, #fff 100%);
 }
+main #main-two {
+  padding-top: 147px;
+  padding-bottom: 125px;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+main #main-two .counter-area {
+  color: #fff;
+  text-align: center;
+}
+main #main-two .counter-area h2 {
+  font-size: 28px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+}
+main #main-two .counter-area h2::after {
+  bottom: auto;
+  top: -22px;
+  left: 50%;
+  margin-left: -11px;
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #e30613;
+  position: absolute;
+}
+main #main-two .counter-area .first-span {
+  display: inline-block;
+  font-size: 69px;
+  line-height: 77px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+main #main-two .counter-area p {
+  color: rgba(255, 255, 255, 0.6);
+}
 
 *,
 *:before,

@@ -201,7 +201,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="row">
-                                        <div class="col-4">
+                                        <div class="col-12 col-md-4">
                                             <div class="main-card">
                                                 <div class="text-box">
                                                     <div class="img-area">
@@ -222,7 +222,7 @@
                                                 <img class="opn-cls-img" src="./assets/img/home/zapp360-bg.webp" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-12 col-md-4">
                                             <div class="main-card">
                                                 <div class="text-box">
                                                     <div class="img-area">
@@ -243,7 +243,7 @@
                                                 <img class="opn-cls-img" src="./assets/img/home/zapp360-bg.webp" alt="">
                                             </div>
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-12 col-md-4">
                                             <div class="main-card">
                                                 <div class="text-box">
                                                     <div class="img-area">
@@ -346,11 +346,63 @@
 
             </div>
         </section>
+        <section id="main-two" style="background-image: url('./assets/img/home/1440.webp');">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="counter-area">
+                            <h2>
+                                Uniting
+                            </h2>
+                            <span class="first-span counter">
+                                2000
+                            </span>
+                            <p>
+                                Software experts
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="counter-area">
+                            <h2>
+                                Among world`s
+                            </h2>
+                            <span class="first-span">
+                                Top
+                                <span class="counter">
+                                    100
+                                </span>
+                            </span>
+                            <p>
+                                Outsourcing Companies by IAOP
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="counter-area">
+                            <h2>
+                                Leveraging
+                            </h2>
+                            <span class="first-span">
+                                <span class="counter">20</span>
+                                <span>years</span>
+                            </span>
+                            <p>
+                                of Global Delivery Experience
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
 
@@ -369,6 +421,10 @@
             },
 
 
+        });
+        $('.counter').counterUp({
+            delay: 10,
+            time: 2000
         });
     </script>
 </body>
