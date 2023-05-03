@@ -47,7 +47,8 @@
   $background: null,
   $text_weight: null,
   $line_height: null,
-  $transition: null
+  $transition: null,
+  $letter_spc:null
 ) {
   font-size: $f_size;
   font-weight: $text_weight;
@@ -60,6 +61,7 @@
   text-align: $text_align;
   text-decoration: $text_decaration;
   transition: $transition;
+  letter-spacing: $letter_spc;
 }
 @mixin Img(
   $img_width: null,
