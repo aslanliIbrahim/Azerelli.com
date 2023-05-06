@@ -200,7 +200,7 @@ main {
         font-size: 150px;
         line-height: 1;
         -webkit-text-stroke: 0.8px #dfe0e5;
-        color: transparent;
+        color: #dfe0e5;
         -webkit-text-stroke: 0.3px #dfe0e5;
         text-transform: uppercase;
       }
@@ -215,9 +215,9 @@ main {
         // bottom: 0;
         //   left: 0;
       }
-      @media (max-width:768px) {
-        span{
-            display: none;
+      @media (max-width: 768px) {
+        span {
+          display: none;
         }
       }
       @media (min-width: 768px) {
@@ -299,14 +299,13 @@ main {
           }
         }
       }
-      &:hover{
-        .visible-box{
-            display: none;
+      &:hover {
+        .visible-box {
+          display: none;
         }
-        .hide-box{
-            
-            opacity: 1;
-            visibility: visible;
+        .hide-box {
+          opacity: 1;
+          visibility: visible;
         }
       }
       @media (min-width: 768px) {
@@ -329,6 +328,74 @@ main {
           border-left: 5px solid #e30613 !important;
         }
       }
+    }
+  }
+  #main-four {
+    .swiper-for-two {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat !important;
+      @include flexible(center, center, row);
+      .slide-two {
+        position: relative;
+        max-width: 550px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align:  center;
+        h3 {
+          text-align: center;
+          font-size: 36px;
+          position: relative;
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          &::after {
+            content: "";
+            width: 22px;
+            height: 2px;
+            background-color: #e30613;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -11px;
+          }
+        }
+        p {
+          text-align: center;
+          margin: 0 auto 33px;
+          font-size: 15px;
+        }
+        a {
+          min-width: 260px;
+          cursor: pointer;
+          padding: 0 30px 0 30px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          font-size: 17px;
+          line-height: 28px;
+          text-decoration: none;
+          height: 52px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: #000;
+          border: 1px solid #000;
+          transition: .25s ease-in-out;
+          &:hover{
+            color: #fff;
+            background-color: #000;
+            border-color: #fff;
+          }
+        }
+      }
+      @media (min-width: 1366px) {
+        max-width: 944px;
+        height: 498px;
+      }
+    }
+
+    .swiper-for-two img {
+      display: block;
+      width: 100%;
     }
   }
 }
