@@ -531,6 +531,100 @@ main #main-five .main-five-cards .main-five-card:hover .main-five-card__img {
   visibility: visible;
   opacity: 1;
 }
+main #main-six {
+  padding-top: 147px;
+  padding-bottom: 125px;
+}
+main #main-six .main-six-up-side {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main #main-six .main-six-up-side h2 {
+  font-size: 38px;
+  color: #0d181c;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 0;
+  z-index: 1;
+  line-height: 1.37;
+}
+main #main-six .main-six-up-side span {
+  display: none;
+}
+@media (min-width: 768px) {
+  main #main-six .main-six-up-side span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 150px;
+    line-height: 1;
+    -webkit-text-stroke: 0.8px #dfe0e5;
+    color: transparent;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  main #main-six .main-six-up-side {
+    padding-top: 6px;
+    padding-bottom: 37px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+}
+main #main-six .video-content-area {
+  display: flex;
+  height: 500px;
+}
+main #main-six .video-content-area__left {
+  background-color: #0d181c;
+  width: 75%;
+}
+main #main-six .video-content-area__left iframe {
+  width: 100%;
+  height: 100%;
+}
+main #main-six .video-content-area__right {
+  width: 25%;
+  background-color: #0d181c;
+}
+main #main-six .video-content-area__right .next-video {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  margin: 5px;
+  transition: 0.25s ease-in-out;
+}
+main #main-six .video-content-area__right .next-video .next-video-area {
+  display: flex;
+  justify-content: space-between;
+}
+main #main-six .video-content-area__right .next-video .next-video-area .video-img {
+  padding: 10px;
+}
+main #main-six .video-content-area__right .next-video .next-video-area .video-img img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main #main-six .video-content-area__right .next-video .next-video-area .next-video-content {
+  padding: 10px;
+}
+main #main-six .video-content-area__right .next-video .next-video-area .next-video-content p {
+  margin: 0;
+}
+main #main-six .video-content-area__right .next-video:hover {
+  background-color: #fff;
+  color: #0d181c;
+}
+main #main-six .video-content-area__right .active-next-video {
+  background-color: #fff;
+  color: #0d181c;
+}
 
 *,
 *:before,
