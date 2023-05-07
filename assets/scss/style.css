@@ -326,10 +326,13 @@ main #main-three a:hover .hide-box {
     border-left: 5px solid #e30613 !important;
   }
 }
+main #main-four {
+  background-color: #eeeff2;
+}
 main #main-four .swiper-for-two {
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat !important;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -395,6 +398,138 @@ main #main-four .swiper-for-two .slide-two a:hover {
 main #main-four .swiper-for-two img {
   display: block;
   width: 100%;
+}
+main #main-five {
+  padding-top: 147px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+main #main-five .main-five-up-area {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main #main-five .main-five-up-area h3 {
+  font-size: 38px;
+  color: #0d181c;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 0;
+  z-index: 1;
+  line-height: 1.37;
+}
+main #main-five .main-five-up-area span {
+  display: none;
+}
+@media (min-width: 768px) {
+  main #main-five .main-five-up-area span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 150px;
+    line-height: 1;
+    -webkit-text-stroke: 0.8px #dfe0e5;
+    color: transparent;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  main #main-five .main-five-up-area {
+    padding-top: 6px;
+    padding-bottom: 37px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+}
+main #main-five .main-five-cards {
+  position: relative;
+  bottom: -100px;
+  overflow: hidden;
+}
+main #main-five .main-five-cards .main-five-card {
+  border: 1px solid #eeeff2;
+  background-color: #fff;
+  transition: 0.25s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+main #main-five .main-five-cards .main-five-card__img {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+}
+main #main-five .main-five-cards .main-five-card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main #main-five .main-five-cards .main-five-card__text-area {
+  position: absolute;
+  z-index: 2;
+  top: -52px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+main #main-five .main-five-cards .main-five-card__text-area h3 {
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  transition: color 0.2s;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #0d181c;
+}
+main #main-five .main-five-cards .main-five-card__text-area h3::after {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #e30613;
+  position: absolute;
+  left: 50%;
+  margin-left: -11px;
+  bottom: -10px;
+}
+main #main-five .main-five-cards .main-five-card__text-area a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  main #main-five .main-five-cards .main-five-card__text-area a {
+    min-width: 280px;
+  }
+}
+@media (min-width: 992px) {
+  main #main-five .main-five-cards .main-five-card__text-area a {
+    max-width: 200px;
+  }
+}
+@media (min-width: 1366px) {
+  main #main-five .main-five-cards .main-five-card__text-area a {
+    max-width: 300px;
+  }
+}
+main #main-five .main-five-cards .main-five-card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  border: 1px solid #eeeff2;
+  box-shadow: 0 2px 38px 0 rgba(0, 0, 0, 0.07), 0 0 0 1px rgba(0, 0, 0, 0.07);
+}
+main #main-five .main-five-cards .main-five-card:hover h3 {
+  color: #e30613;
+}
+main #main-five .main-five-cards .main-five-card:hover .main-five-card__img {
+  visibility: visible;
+  opacity: 1;
 }
 
 *,
