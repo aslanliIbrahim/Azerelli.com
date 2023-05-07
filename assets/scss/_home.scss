@@ -571,6 +571,16 @@ main {
         margin-top: 90px;
         margin-bottom: 90px;
       }
+      &::after {
+        content: "";
+        width: 22px;
+        height: 2px;
+        background-color: #e30613;
+        position: absolute;
+        left: 50%;
+        margin-left: -11px;
+        bottom: -10px;
+      }
     }
     .video-content-area {
       // border: 2px solid red;
@@ -612,7 +622,7 @@ main {
               }
             }
           }
-          &:hover{
+          &:hover {
             background-color: $white;
             color: $main-black;
           }
@@ -620,6 +630,173 @@ main {
         .active-next-video {
           background-color: $white;
           color: $main-black;
+        }
+      }
+    }
+  }
+  #main-seven {
+    .main-seven-up-side {
+      h2 {
+        @include TextFont(
+          $f_size: 38px,
+          $f_color: $main-black,
+          $text-trans: uppercase
+        );
+        position: relative;
+        margin-bottom: 0;
+        z-index: 1;
+        line-height: 1.37;
+      }
+      span {
+        display: none;
+        @media (min-width: 768px) {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          white-space: nowrap;
+          font-size: 150px;
+          line-height: 1;
+          -webkit-text-stroke: 0.8px #dfe0e5;
+          color: transparent;
+          text-align: center;
+        }
+      }
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      @media (min-width: 768px) {
+        padding-top: 6px;
+        padding-bottom: 37px;
+        margin-top: 90px;
+        margin-bottom: 90px;
+      }
+      &::after {
+        content: "";
+        width: 22px;
+        height: 2px;
+        background-color: #e30613;
+        position: absolute;
+        left: 50%;
+        margin-left: -11px;
+        bottom: -10px;
+      }
+    }
+    .more-news {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: $main-black;
+        font-size: 17px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        height: 52px;
+        transition: 0.25s ease-in-out;
+        span {
+          padding: 4px 0;
+          border-bottom: 1px solid #eeeff2;
+          transition: all 0.3s;
+        }
+        i {
+          margin-left: 10px;
+          font-size: 17px;
+        }
+        &:hover {
+          span {
+            border-bottom: 1px solid #e30613;
+          }
+        }
+        @media (min-width: 768px) {
+          padding: 0 30px 0 30px;
+        }
+        @media (min-width: 992px) {
+          display: inline-flex;
+          margin-bottom: 63px;
+        }
+      }
+    }
+
+    .news-card-main {
+      overflow: hidden;
+      a {
+        display: inline-flex;
+        flex-direction: column;
+        color: $main-black;
+        text-decoration: none;
+        transition: .25s ease-in-out;
+        padding: 10px 20px;
+        .news-img {
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        .news-content {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 0 auto;
+          color: rgba(13, 24, 28, 0.8);
+          padding: 20px 0 25px;
+          width: 100%;
+          transition: 0.2s ease-in-out;
+          .title-area {
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            .title {
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 30px;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+            }
+            &::after {
+              content: "";
+              width: 22px;
+              height: 2px;
+              background-color: #e30613;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+          }
+          .date {
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 20px;
+            letter-spacing: 0;
+            color: rgba(13, 24, 28, 0.6);
+          }
+          .description {
+            font-size: 15px;
+          }
+          .hide-arrow {
+            position: absolute;
+            font-size: 25px;
+            visibility: hidden;
+            opacity: 0;
+            left: -10%;
+            bottom: 0;
+            transition: 0.25s ease-in-out;
+          }
+        }
+        &:hover {
+          transform: scale(1.1);
+          background-color: #fff;
+          box-shadow: 0 2px 38px 0 rgba(0, 0, 0, 0.07);
+          .hide-arrow {
+            left: 0%;
+            visibility: visible;
+            opacity: 1;
+          }
         }
       }
     }

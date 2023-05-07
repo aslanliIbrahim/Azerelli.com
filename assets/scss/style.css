@@ -576,6 +576,16 @@ main #main-six .main-six-up-side span {
     margin-bottom: 90px;
   }
 }
+main #main-six .main-six-up-side::after {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #e30613;
+  position: absolute;
+  left: 50%;
+  margin-left: -11px;
+  bottom: -10px;
+}
 main #main-six .video-content-area {
   display: flex;
   height: 500px;
@@ -624,6 +634,173 @@ main #main-six .video-content-area__right .next-video:hover {
 main #main-six .video-content-area__right .active-next-video {
   background-color: #fff;
   color: #0d181c;
+}
+main #main-seven .main-seven-up-side {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main #main-seven .main-seven-up-side h2 {
+  font-size: 38px;
+  color: #0d181c;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 0;
+  z-index: 1;
+  line-height: 1.37;
+}
+main #main-seven .main-seven-up-side span {
+  display: none;
+}
+@media (min-width: 768px) {
+  main #main-seven .main-seven-up-side span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 150px;
+    line-height: 1;
+    -webkit-text-stroke: 0.8px #dfe0e5;
+    color: transparent;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  main #main-seven .main-seven-up-side {
+    padding-top: 6px;
+    padding-bottom: 37px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+}
+main #main-seven .main-seven-up-side::after {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #e30613;
+  position: absolute;
+  left: 50%;
+  margin-left: -11px;
+  bottom: -10px;
+}
+main #main-seven .more-news {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main #main-seven .more-news a {
+  text-decoration: none;
+  color: #0d181c;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  height: 52px;
+  transition: 0.25s ease-in-out;
+}
+main #main-seven .more-news a span {
+  padding: 4px 0;
+  border-bottom: 1px solid #eeeff2;
+  transition: all 0.3s;
+}
+main #main-seven .more-news a i {
+  margin-left: 10px;
+  font-size: 17px;
+}
+main #main-seven .more-news a:hover span {
+  border-bottom: 1px solid #e30613;
+}
+@media (min-width: 768px) {
+  main #main-seven .more-news a {
+    padding: 0 30px 0 30px;
+  }
+}
+@media (min-width: 992px) {
+  main #main-seven .more-news a {
+    display: inline-flex;
+    margin-bottom: 63px;
+  }
+}
+main #main-seven .news-card-main {
+  overflow: hidden;
+}
+main #main-seven .news-card-main a {
+  display: inline-flex;
+  flex-direction: column;
+  color: #0d181c;
+  text-decoration: none;
+  transition: 0.25s ease-in-out;
+  padding: 10px 20px;
+}
+main #main-seven .news-card-main a .news-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main #main-seven .news-card-main a .news-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  color: rgba(13, 24, 28, 0.8);
+  padding: 20px 0 25px;
+  width: 100%;
+  transition: 0.2s ease-in-out;
+}
+main #main-seven .news-card-main a .news-content .title-area {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+main #main-seven .news-card-main a .news-content .title-area .title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+main #main-seven .news-card-main a .news-content .title-area::after {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #e30613;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main #main-seven .news-card-main a .news-content .date {
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: rgba(13, 24, 28, 0.6);
+}
+main #main-seven .news-card-main a .news-content .description {
+  font-size: 15px;
+}
+main #main-seven .news-card-main a .news-content .hide-arrow {
+  position: absolute;
+  font-size: 25px;
+  visibility: hidden;
+  opacity: 0;
+  left: -10%;
+  bottom: 0;
+  transition: 0.25s ease-in-out;
+}
+main #main-seven .news-card-main a:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  box-shadow: 0 2px 38px 0 rgba(0, 0, 0, 0.07);
+}
+main #main-seven .news-card-main a:hover .hide-arrow {
+  left: 0%;
+  visibility: visible;
+  opacity: 1;
 }
 
 *,
