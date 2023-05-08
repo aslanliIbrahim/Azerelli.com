@@ -81,6 +81,11 @@ header {
           background-color: #e30613;
           text-decoration: none;
           color: $white;
+          transition: 0.25s ease-in-out;
+          &:hover {
+            background-color: #be0510;
+            border-color: #b1050f;
+          }
         }
       }
       @media (max-width: 1200px) {
@@ -95,6 +100,24 @@ header {
   }
 }
 main {
+  .swiper-button-next {
+    background: $main-black;
+    border-radius: 4px;
+    padding: 25px;
+    &::after {
+      color: $white;
+      font-size: 29px;
+    }
+  }
+  .swiper-button-prev {
+    background: $main-black;
+    border-radius: 4px;
+    padding: 25px;
+    &::after {
+      color: $white;
+      font-size: 29px;
+    }
+  }
   .main-one {
     @include flexible($direction: column, $jus: flex-end);
     min-height: 742px;
@@ -903,6 +926,83 @@ footer {
     }
     &:hover {
       color: #e30613;
+    }
+  }
+  .footer-down {
+    border: 1px solid #dfe0e5;
+  }
+  .footer-widget {
+    border-right: 1px solid #dfe0e5;
+    min-height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    padding-left: 40px;
+    p {
+      margin: 0;
+    }
+    .footer-links {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      span {
+        position: relative;
+        margin: 0 20px;
+        display: block;
+        max-width: 100%;
+        height: 0px;
+        max-height: 0px;
+        border: solid;
+        border-width: thin 0 0 0;
+        transition: inherit;
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          width: 1px;
+          background-color: #eeeff2;
+          height: 1.4667rem;
+          transform: translateY(30%);
+          bottom: 0;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $main-black;
+        transition: 0.25s ease-in-out;
+        &:hover {
+          color: #be0510;
+        }
+      }
+      @media (min-width: 768px) {
+        width: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+  .footer-social {
+    background-color: #dfe0e5;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    a {
+      color: #0d181c;
+      opacity: 0.3;
+      transition: opacity 0.2s;
+      padding: 10px;
+      text-decoration: none;
+      font-size: 20px;
+      opacity: 0.5;
+      &:hover {
+        color: $main-black;
+        opacity: 1;
+      }
     }
   }
 }

@@ -80,6 +80,11 @@ header nav .nav-right__right a {
   background-color: #e30613;
   text-decoration: none;
   color: #fff;
+  transition: 0.25s ease-in-out;
+}
+header nav .nav-right__right a:hover {
+  background-color: #be0510;
+  border-color: #b1050f;
 }
 @media (max-width: 1200px) {
   header nav .nav-right {
@@ -92,6 +97,24 @@ header nav .nav-right__right a {
   }
 }
 
+main .swiper-button-next {
+  background: #0d181c;
+  border-radius: 4px;
+  padding: 25px;
+}
+main .swiper-button-next::after {
+  color: #fff;
+  font-size: 29px;
+}
+main .swiper-button-prev {
+  background: #0d181c;
+  border-radius: 4px;
+  padding: 25px;
+}
+main .swiper-button-prev::after {
+  color: #fff;
+  font-size: 29px;
+}
 main .main-one {
   display: flex;
   justify-content: flex-end;
@@ -902,6 +925,85 @@ footer .button span {
 }
 footer .button:hover {
   color: #e30613;
+}
+footer .footer-down {
+  border: 1px solid #dfe0e5;
+}
+footer .footer-widget {
+  border-right: 1px solid #dfe0e5;
+  min-height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  padding-left: 40px;
+}
+footer .footer-widget p {
+  margin: 0;
+}
+footer .footer-widget .footer-links {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-widget .footer-links span {
+  position: relative;
+  margin: 0 20px;
+  display: block;
+  max-width: 100%;
+  height: 0px;
+  max-height: 0px;
+  border: solid;
+  border-width: thin 0 0 0;
+  transition: inherit;
+}
+footer .footer-widget .footer-links span::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 1px;
+  background-color: #eeeff2;
+  height: 1.4667rem;
+  transform: translateY(30%);
+  bottom: 0;
+}
+footer .footer-widget .footer-links a {
+  text-decoration: none;
+  color: #0d181c;
+  transition: 0.25s ease-in-out;
+}
+footer .footer-widget .footer-links a:hover {
+  color: #be0510;
+}
+@media (min-width: 768px) {
+  footer .footer-widget .footer-links {
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+footer .footer-social {
+  background-color: #dfe0e5;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer .footer-social a {
+  color: #0d181c;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 0.5;
+}
+footer .footer-social a:hover {
+  color: #0d181c;
+  opacity: 1;
 }
 
 *,
