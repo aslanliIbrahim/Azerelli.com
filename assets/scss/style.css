@@ -51,6 +51,36 @@ header nav .nav-right__left .main-ul .main-li:hover {
 header nav .nav-right__left .main-ul .main-li:hover a::after {
   bottom: -3px;
 }
+header nav .nav-right__right {
+  display: flex;
+}
+header nav .nav-right__right form {
+  position: relative !important;
+}
+header nav .nav-right__right form input {
+  border: none;
+  border-left: 1px solid #dfe0e5;
+  padding: 16px 10px;
+}
+header nav .nav-right__right form i {
+  position: absolute;
+  top: 26%;
+  right: 9%;
+}
+header nav .nav-right__right a {
+  padding: 0px 40px;
+  height: 56px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e30613;
+  text-decoration: none;
+  color: #fff;
+}
 @media (max-width: 1200px) {
   header nav .nav-right {
     display: none;
@@ -789,7 +819,7 @@ main #main-seven .news-card-main a .news-content .hide-arrow {
   visibility: hidden;
   opacity: 0;
   left: -10%;
-  bottom: 0;
+  bottom: 5%;
   transition: 0.25s ease-in-out;
 }
 main #main-seven .news-card-main a:hover {
@@ -801,6 +831,77 @@ main #main-seven .news-card-main a:hover .hide-arrow {
   left: 0%;
   visibility: visible;
   opacity: 1;
+}
+
+footer {
+  position: relative;
+}
+footer .footer-left {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-left .footer-logo img {
+  max-width: 87px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-right: 1px solid #eeeff2;
+  padding-right: 30px;
+}
+footer .footer-left .footer-left-content {
+  width: 75%;
+}
+footer .footer-left .footer-left-content h3 {
+  margin-bottom: 20px;
+}
+footer .footer-left .footer-left-content p {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(13, 24, 28, 0.6);
+}
+footer .footer-right-area .footer-right-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+footer .footer-right-area .footer-right-one h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+footer .footer-right-area .footer-right-one ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer .footer-right-area .footer-right-one ul li {
+  line-height: 38px;
+}
+footer .footer-right-area .footer-right-one ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: rgba(13, 24, 28, 0.8);
+  transition: 0.25s ease-in-out;
+}
+footer .footer-right-area .footer-right-one ul li a:hover {
+  color: #e30613;
+}
+footer .button {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: #0d181c;
+  font-size: 30px;
+  transition: 0.25s ease-in-out;
+}
+footer .button span {
+  transform: rotate(90deg);
+  margin-top: 30px;
+}
+footer .button:hover {
+  color: #e30613;
 }
 
 *,
