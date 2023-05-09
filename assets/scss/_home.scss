@@ -1,3 +1,44 @@
+.hover-cards {
+  width: 75%;
+  .text-boxs {
+    position: relative;
+    z-index: 3;
+    overflow: visible;
+    transition: 0.25s ease-in-out;
+    background-color: $white;
+    color: $main-black;
+    text-align: center;
+    padding: 15px;
+    border-radius: 2px;
+    .hide-texts {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+    }
+  }
+  .opn-cls-imgs {
+    height: 0;
+    opacity: 0;
+    visibility: visible;
+    transition: 0.25s ease-in-out;
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    .hide-texts {
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+    }
+    .opn-cls-imgs {
+      height: 100px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
 header {
   nav {
     .logo-side {
@@ -16,8 +57,33 @@ header {
           padding: 0;
           margin: 0;
           list-style: none;
+          #first-nav {
+            &:hover {
+              .hover-menu {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+          #second-nav {
+            transition: 0.25s ease-in-out;
+            &:hover {
+              .hover-menu {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+          #third-nav {
+            transition: 0.25s ease-in-out;
+            &:hover {
+              .hover-menu {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
           .main-li {
-            // transition: 0.25s all ease-in-out;
             &:nth-child(2n + 2) {
               a {
                 &::after {
@@ -25,13 +91,11 @@ header {
                 }
               }
             }
-
             .main-a {
               @include for-A;
               padding: 0px 20px;
               position: relative;
               transition: transform 0.2s;
-
               &::after {
                 content: url("../img/home/arrow-down.svg");
                 margin-top: 1px;
@@ -39,6 +103,75 @@ header {
                 padding: 5px;
                 text-align: center;
                 position: inherit;
+              }
+              @media (max-width:1300px) {
+                span{
+                  font-size: 13px;
+                  line-height: 40px;
+                }
+              }
+            }
+
+            .hover-menu {
+              visibility: hidden;
+              opacity: 0;
+              width: 70%;
+              overflow: hidden;
+              position: absolute;
+              z-index: 10;
+              left: 0;
+              width: 100%;
+              background-color: $white;
+              transition: 0.25s ease-in-out;
+              .hovered-menu {
+                padding-bottom: 30px;
+                .h3-title {
+                  position: relative;
+                  padding-bottom: 20px;
+                  margin-bottom: 20px;
+                  text-transform: uppercase;
+                  margin-left: 15px;
+                  margin-right: 15px;
+                  font-size: 17px;
+                  line-height: 25px;
+                  letter-spacing: 0.5px;
+                  text-transform: uppercase;
+                  color: $main-black;
+                  font-weight: 600;
+                  &::after {
+                    content: "";
+                    width: 22px;
+                    height: 2px;
+                    background-color: #e30613;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                  }
+                  @media (min-width: 768px) {
+                    font-size: 22px;
+                    line-height: 30px;
+                  }
+                }
+                ul {
+                  padding: 0;
+                  margin: 0;
+                  list-style: none;
+                  li {
+                    a {
+                      color: $main-black;
+                      text-decoration: none;
+                      display: flex;
+                      height: 56px;
+                      padding: 0 48px 0 15px;
+                      align-items: center;
+                      transition: background-color 0.2s;
+                      &:hover {
+                        background-color: #dfe0e5;
+                        border-radius: 3px;
+                      }
+                    }
+                  }
+                }
               }
             }
             &:hover {
@@ -100,7 +233,14 @@ header {
   }
 }
 main {
+  .swiper-container {
+    position: relative;
+  }
+  .swiper-button-prev,
   .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background: $main-black;
     border-radius: 4px;
     padding: 25px;
@@ -109,14 +249,11 @@ main {
       font-size: 29px;
     }
   }
-  .swiper-button-prev {
-    background: $main-black;
-    border-radius: 4px;
-    padding: 25px;
-    &::after {
-      color: $white;
-      font-size: 29px;
-    }
+  .swiper-button-next {
+    right: 10px;
+  }
+  .swiper-button-left {
+    left: 10px;
   }
   .main-one {
     @include flexible($direction: column, $jus: flex-end);
@@ -150,7 +287,10 @@ main {
     }
     .main-card {
       position: relative;
-      transition: 2s ease-in-out;
+      transition: 0.25s ease-in-out;
+      border-radius: 2px;
+      overflow: visible;
+      width: 75%;
       .text-box {
         display: flex;
         flex-direction: column;
@@ -168,7 +308,12 @@ main {
         width: 100%;
       }
       &:hover {
-        height: 350px;
+        background-color: red;
+        // height: auto;
+        transform: translateY(-35px);
+        .opn-cls-img {
+          height: 350px;
+        }
         img {
           object-fit: cover;
         }
@@ -198,6 +343,21 @@ main {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    #two-leftimg {
+      position: absolute;
+      left: -96px;
+      top: -120px;
+      width: 500px;
+      transform: rotate(180deg);
+    }
+    #two-rightimg {
+      position: absolute;
+      right: -6%;
+      bottom: -40%;
+      width: 500px;
+    }
     .counter-area {
       color: $white;
       text-align: center;
@@ -233,6 +393,33 @@ main {
   }
   #main-three {
     background-color: #eeeff2;
+    position: relative;
+    overflow: hidden;
+    #three-leftimg {
+      width: 500px;
+      position: absolute;
+      left: -47px;
+    }
+    #three-leftimg2 {
+      position: absolute;
+      left: -15%;
+      width: 500px;
+      transform: rotate(180deg);
+      top: 0;
+    }
+
+    #three-rightimg {
+      width: 500px;
+      position: absolute;
+      right: 0px;
+      top: 0;
+      transform: rotate(180deg);
+    }
+    #three-rightimg2 {
+      position: absolute;
+      width: 500px;
+      right: -15%;
+    }
     .text-area {
       display: flex;
       align-items: center;
@@ -455,10 +642,23 @@ main {
   }
   #main-five {
     padding-top: 147px;
+    position: relative;
     // padding-bottom: 125px;
     background-size: cover;
     background-position: center center;
     position: relative;
+    #five-leftimg {
+      width: 500px;
+      position: absolute;
+      left: -16%;
+      top: -6%;
+    }
+    #five-rightimg {
+      width: 500px;
+      position: absolute;
+      top: 14%;
+      right: 0%;
+    }
     .main-five-up-area {
       h3 {
         @include TextFont(
@@ -585,8 +785,23 @@ main {
     }
   }
   #main-six {
+    position: relative;
+    overflow: hidden;
     padding-top: 147px;
     padding-bottom: 125px;
+    #six-leftimg {
+      width: 500px;
+      position: absolute;
+      left: -16%;
+      top: 0;
+    }
+    #six-rightimg {
+      position: absolute;
+      right: -16%;
+      top: 0;
+      width: 500px;
+      transform: rotate(180deg);
+    }
     .main-six-up-side {
       h2 {
         @include TextFont(
@@ -689,6 +904,21 @@ main {
     }
   }
   #main-seven {
+    position: relative;
+    overflow: hidden;
+    #seven-leftimg {
+      position: absolute;
+      width: 500px;
+      left: -15%;
+      top: -10%;
+    }
+    #seven-rightimg {
+      width: 500px;
+      position: absolute;
+      right: -15%;
+      top: -7%;
+      transform: rotate(180deg);
+    }
     .main-seven-up-side {
       h2 {
         @include TextFont(
@@ -774,7 +1004,6 @@ main {
         }
       }
     }
-
     .news-card-main {
       overflow: hidden;
       a {
